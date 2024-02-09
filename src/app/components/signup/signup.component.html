@@ -1,0 +1,19 @@
+<div class="signup_container" *ngIf="!isSignedIn">
+  <h2>Sign Up</h2>
+  <input #name type="text" placeholder="Name" />
+  <input #signup_email type="text" placeholder="Email" />
+  <input #signup_password type="password" placeholder="Password" />
+  <input type="checkbox" #is_admin hidden />
+  <button
+    (click)="
+      signUp(
+        name.value,
+        signup_email.value,
+        signup_password.value,
+        is_admin.value
+      )
+    "
+  >
+    Sign Up
+  </button>
+</div>

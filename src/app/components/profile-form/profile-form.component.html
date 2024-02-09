@@ -1,0 +1,39 @@
+<h3>Profile Form</h3>
+<form id="myForm" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <h4 for="name">Name:</h4>
+  <input type="text" id="name" formControlName="name" />
+
+  <ng-container *ngFor="let experience of experiences.controls; let i = index">
+    <app-experience-form [experience]="experience"></app-experience-form>
+    <button class="remove_button" type="button" (click)="removeExperience(i)">
+      Remove Experience
+    </button>
+  </ng-container>
+  <button type="button" (click)="addExperience()">Add Experience</button>
+
+  <ng-container *ngFor="let academic of academics.controls; let i = index">
+    <app-academics-form [academic]="academic"></app-academics-form>
+    <button class="remove_button" type="button" (click)="removeAcademics(i)">
+      Remove Academics
+    </button>
+  </ng-container>
+  <button type="button" (click)="addAcademics()">Add Academics</button>
+
+  <div>
+    <h4 for="job_role">Job Role:</h4>
+    <select type="text" id="job_role" formControlName="job_role">
+      <option type="text">Software Engineer</option>
+      <option type="text">Peon</option>
+      <option type="text">IT</option>
+      <option type="text">Accountant</option>
+      <option type="text">Marketing Executive</option>
+      <option type="text">Receptionist</option>
+      <option type="text">Cashier</option>
+      <option type="text">Supervisor</option>
+      <option type="text">Human Resources</option>
+      <option type="text">Sales Manager</option>
+    </select>
+  </div>
+
+  <button type="submit">Save Profile</button>
+</form>

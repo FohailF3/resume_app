@@ -1,0 +1,168 @@
+/* Add styles for the profile details component */
+
+/* Example styles for the details container */
+.profile-details-container {
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  h3 {
+    font-size: 2em;
+    padding-left: 20px;
+  }
+}
+
+/* Example styles for the profile details */
+.profile-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Example styles for the job role */
+.job_role {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+.designation {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.degree {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.company {
+  display: flex;
+  justify-content: space-between;
+}
+
+.schooling {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tenure {
+  text-align: right;
+  color: #666;
+}
+
+.profile-name {
+  padding-left: 20px;
+}
+
+/* Example styles for the experiences list */
+.experiences-list {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  background-color: #f9f9f9;
+  margin-bottom: 15px;
+  border-top: #666;
+}
+
+/* Example styles for the academics list */
+.academics-list {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  background-color: #f9f9f9;
+  margin-bottom: 15px;
+  border-top: #666;
+}
+
+.profile-list-container {
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Example styles for the profile item */
+.profile-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 10px 10px 375px;
+  width: 950px;
+  background-color: #f4f4f4;
+}
+/* Styles for the table */
+
+table {
+  width: 63%;
+  border-collapse: collapse;
+  margin-left: 180px;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+td {
+  text-align: left;
+}
+
+thead {
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+/* Styles for the profile item */
+.profile-item {
+  transition: background-color 0.3s;
+}
+
+.profile-item:hover {
+  background-color: #f0f0f0;
+}
+
+.details {
+  padding: 8px 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+}
+
+.editDetails {
+  padding: 8px 12px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.edit_profile {
+  padding: 8px 12px;
+  width: 100px;
+  margin-left: 1247px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+}
+
+.action_button {
+  display: flex;
+  justify-content: center;
+}

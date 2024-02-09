@@ -1,0 +1,7 @@
+<div class="signin_container" *ngIf = "!isSignedIn">
+    <h2>Sign In</h2>
+    <input #signin_email type="text" [(ngModel)]="email" placeholder="Email" />
+    <input #signin_password type="password" placeholder="Password" />
+    <button (click)="signIn(signin_email.value, signin_password.value)">Sign In</button>
+    <a (click)="handleRegister()" RouterLink="/signup">Register</a>
+</div>

@@ -1,0 +1,33 @@
+<div class="profile-details-container">
+  <h2>Profile Details</h2>
+  <button (click)="goBack()">back</button>
+  <div *ngFor="let prof of profile" class="profile-item">
+    <h2 class="profile-name">{{ prof.name }}</h2>
+    <p class="job_role">{{ prof.job_role }}</p>
+    <h3 *ngIf="prof.experiences">Experience</h3>
+    <div
+      *ngFor="let experience of prof.experiences"
+      class="experiences-list"
+    >
+      <p class="designation">{{ experience.designation }}</p>
+      <div class="company">
+        <p>{{ experience.company_name }}</p>
+        <div class="tenure">
+          <p>{{ experience.start_date }} to {{ experience.end_date }}</p>
+        </div>
+      </div>
+      <p>{{ experience.responsibility }}</p>
+    </div>
+    <h3 *ngIf="prof.academics">Academics</h3>
+    <div *ngFor="let academic of prof.academics" class="academics-list">
+      <p class="degree">{{ academic.degree }}</p>
+      <div class="schooling">
+        <p>{{ academic.school }}</p>
+        <div class="tenure">
+          <p>{{ academic.start_date }} to {{ academic.end_date }}</p>
+        </div>
+      </div>
+      <p>{{ academic.description }}</p>
+    </div>
+  </div>
+</div>

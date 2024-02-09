@@ -1,0 +1,62 @@
+/* Apply a background color to the entire page */
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Center the sign-in container */
+.signup_container {
+  background-color: #83ccea;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 372px; /* Set a fixed width for the container */
+  margin: 385px 0 0 700px;
+}
+
+/* Style the input fields and button */
+input[type="text"],
+[type="password"],
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Style the Register link */
+a {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #007bff;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+.error-message {
+  color: red;
+}

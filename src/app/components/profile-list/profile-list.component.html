@@ -1,0 +1,60 @@
+<div *ngIf="admin">
+  <h2>Profiles List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Job Role</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let profile of profiles" class="profile-item">
+        <td>{{ profile.name }}</td>
+        <td>{{ profile.job_role }}</td>
+        <td>{{ profile.email }}</td>
+        <td class="action_button">
+          <button class="details" (click)="getProfile(profile.userId)">
+            Details
+          </button>
+          <button class="editDetails" (click)="editProfile(profile.userId)">
+            Edit
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="general">
+  <h2>Your Profile Details</h2>
+  <button class="edit_profile" (click)="editProfile(profile.userId)">Edit</button>
+  <div class="profile-details-container">
+    <div *ngFor="let prof of profile" class="profile-item">
+      <h2 class="profile-name">{{ prof.name }}</h2>
+      <p class="job_role">{{ prof.job_role }}</p>
+      <h3 *ngIf prof.experiences>Experiences</h3>
+      <div *ngFor="let experience of prof.experiences" class="experiences-list">
+        <p class="designation">{{ experience.designation }}</p>
+        <div class="company">
+          <p>{{ experience.company_name }}</p>
+          <div class="tenure">
+            <p>{{ experience.start_date }} to {{ experience.end_date }}</p>
+          </div>
+        </div>
+        <p>{{ experience.responsibility }}</p>
+      </div>
+      <h3 *ngIf="prof.academics">Academics</h3>
+      <div *ngFor="let academic of prof.academics" class="academics-list">
+        <p class="degree">{{ academic.degree }}</p>
+        <div class="schooling">
+          <p>{{ academic.school }}</p>
+          <div class="tenure">
+            <p>{{ academic.start_date }} to {{ academic.end_date }}</p>
+          </div>
+        </div>
+        <p>{{ academic.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>
